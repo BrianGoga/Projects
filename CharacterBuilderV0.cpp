@@ -12,12 +12,26 @@
 
 using namespace std;
 
+//struct
+struct character 
+{
+    string name;
+    string race;
+    string profession;
+    string alignment;
+    int level;
+
+} temp;
+
+//Functions
+void createChar(character temp);
+
 //Main Program
 int main()
 {
     //Variables
     
-    int ans = 0;
+    char ans = 0;
     int exit = 0;
     
     //Menu 
@@ -36,17 +50,18 @@ int main()
         cin>>ans;
         
         //check for int value
-        if(ans >= 0 && ans <= 9)
-        {
-                    
+              ans = ans - '0';
+                       
             //go to option chosen
-            switch(int(ans))
+            switch( ans )
             {
                 //creat new character
                 case 1 : 
+                    createChar(temp);
                     break;
                 //create a random character   
-                case 2 :
+                case 2 : 
+                    cout<<"you got to case 2"<<endl;
                     break;
                 //exit   
                 case 3 : exit = 1;
@@ -56,7 +71,6 @@ int main()
                     break;
             
             }
-        }
         ans = 0;
     }
     //looping till user wants out
@@ -67,3 +81,53 @@ int main()
     //going home
     return 0;
 }
+
+//Implementation
+void createChar(character acter)
+{
+    //variables
+    int exit = 0;
+    
+    do
+    {
+        //clear the screen
+        system ("clear");
+        
+        //print the menu
+        cout<<"Building New Character"<<endl;
+        cout<<"1) Name"<<endl;
+        cout<<"2) Race"<<endl;
+        cout<<"3) Class"<<endl;
+        cout<<"4) Alignment"<<endl;
+        cout<<"5) Level"<<endl;
+        cout<<"10) Exit"<<endl;
+    }
+    while(exit == 0)
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
