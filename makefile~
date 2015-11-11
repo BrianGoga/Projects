@@ -1,0 +1,2 @@
+CharacterBuilde: CharacterBuilder.cpp Character.h
+	g++ -o CharacterBuilder.cpp

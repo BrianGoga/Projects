@@ -1,0 +1,118 @@
+#ifndef Character_cpp
+#define Character_cpp
+#include <iostream>
+#include <string>
+
+//class
+using namespace std;
+
+class Character 
+{
+    private:
+    string name;
+    string race;
+    string profession;
+    string alignment;
+    int level;
+    int stats[6];
+    
+    public:
+    Character();
+        
+    void setName(string id);
+    string getName();
+    
+    void setRace(string id);
+    string getRace();
+    
+    void setClass(string id);
+    string getClass();
+    
+    void setAlign(string id);
+    string getAlign();
+    
+    void setLevel(int id);
+    int getLevel();
+
+    
+};
+
+Character::Character()
+{
+    name = "NULL";
+    race = "NULL";
+    profession = "NULL";
+    alignment = "NULL";
+    level = 0;
+    
+    for(int i = 0; i<6; i++)
+    {
+        stats[i] = 0;
+    }
+}
+
+void Character::setName(string id)
+{
+    name = id;
+}
+
+string Character::getName()
+{
+    return name;
+}
+
+void Character::setRace(string id)
+{
+    race = id;
+}
+
+string Character::getRace()
+{
+    return race;
+}
+
+void Character::setClass(string id)
+{
+    profession = id;
+}
+
+string Character::getClass()
+{
+    return profession;
+}
+
+void Character::setAlign(string id)
+{
+    alignment = id;
+}
+
+string Character::getAlign()
+{
+    return alignment;
+}
+
+void Character::setLevel(int id)
+{
+    level = id;
+}
+
+int Character::getLevel()
+{
+    return level;
+}
+
+
+
+
+
+
+
+
+
+
+
+#endif
+
+
+
+
